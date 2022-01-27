@@ -18,6 +18,7 @@ metatable.__newindex = newcclosure(function(t, i, v)
     end
     return newindex(t, i, v)
 end)
- 
+ pcall(function()
 getscriptclosure(game:GetService("ReplicatedFirst"):WaitForChild("ItemSpawn"))()
+end)
 end
